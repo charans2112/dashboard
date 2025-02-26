@@ -33,47 +33,41 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function renderChat() {
         chatList.innerHTML = "";
-
-        // Get filter values
+    
         const searchText = searchBox.value.toLowerCase();
         const selectedSender = senderFilter.value;
         const fromDateValue = fromDate.value ? new Date(fromDate.value) : null;
         const toDateValue = toDate.value ? new Date(toDate.value) : null;
-        const sortValue = sortOrder.value;
-
-        // Apply filters
+        const sortValue = sortOrder.value || "oldest"; // Default to oldest
+    
         let filteredData = chatData.filter(chat => {
-            const messageMatches = chat.message.toLowerCase().includes(searchText);
-            const senderMatches = selectedSender ? chat.sender === selectedSender : true;
-            const dateMatches =
+            return chat.message.toLowerCase().includes(searchText) &&
+                (!selectedSender || chat.sender === selectedSender) &&
                 (!fromDateValue || chat.date >= fromDateValue) &&
                 (!toDateValue || chat.date <= toDateValue);
-
-            return messageMatches && senderMatches && dateMatches;
         });
-
-        // Apply sorting
+    
+        // Default sorting (oldest first)
+        filteredData.sort((a, b) => a.date - b.date);
+    
         if (sortValue === "newest") {
-            filteredData.sort((a, b) => b.date - a.date);
-        } else {
-            filteredData.sort((a, b) => a.date - b.date);
+            filteredData.reverse();
         }
-
-        // Render messages
+    
         filteredData.forEach(chat => {
             let div = document.createElement("div");
             div.classList.add("chat-message", chat.sender === "Chinni" ? "sent" : "received");
-
+    
             div.innerHTML = `
                 <img src="${chat.profilePic || 'default-avatar.jpg'}" class="profile-pic">
                 <div class="message-text">${chat.message}</div>
             `;
-
+    
             chatList.appendChild(div);
         });
-
+    
         chatList.scrollTop = chatList.scrollHeight;
-    }
+    }    
 
     // Event listeners for filtering
     searchBox.addEventListener("input", renderChat);
