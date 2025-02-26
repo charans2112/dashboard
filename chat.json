@@ -1,0 +1,14 @@
+[
+    { "sender": "Chinni", "message": "Hey Charan! How are you?", "profilePic": "chinni.jpg", "date": "2024-02-20T10:00:00" },
+    { "sender": "Charan Reddy", "message": "Hey Chinni! I'm good, how about you?", "profilePic": "charan.jpg", "date": "2024-02-20T10:02:00" },
+    { "sender": "Chinni", "message": "I'm doing great! Let's catch up soon!", "profilePic": "chinni.jpg", "date": "2024-02-20T10:05:00" },
+    { "sender": "Charan Reddy", "message": "Sure, let’s plan for this weekend!", "profilePic": "charan.jpg", "date": "2024-02-20T10:07:00" },
+    { "sender": "Chinni", "message": "Sounds perfect! 😊", "profilePic": "chinni.jpg", "date": "2024-02-20T10:10:00" },
+    { "sender": "Charan Reddy", "message": "What time would be good for you?", "profilePic": "charan.jpg", "date": "2024-02-20T10:12:00" },
+    { "sender": "Chinni", "message": "How about 5 PM on Saturday?", "profilePic": "chinni.jpg", "date": "2024-02-20T10:15:00" },
+    { "sender": "Charan Reddy", "message": "That works! Where do you want to meet?", "profilePic": "charan.jpg", "date": "2024-02-20T10:17:00" },
+    { "sender": "Chinni", "message": "Maybe our favorite café? 😊", "profilePic": "chinni.jpg", "date": "2024-02-20T10:20:00" },
+    { "sender": "Charan Reddy", "message": "Sounds like a plan! Looking forward to it!", "profilePic": "charan.jpg", "date": "2024-02-20T10:22:00" },
+    { "sender": "Chinni", "message": "Me too! See you soon! ❤️", "profilePic": "chinni.jpg", "date": "2024-02-20T10:25:00" },
+    { "sender": "Charan Reddy", "message": "Take care, Chinni! 😊", "profilePic": "charan.jpg", "date": "2024-02-20T10:27:00" }
+]

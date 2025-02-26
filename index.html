@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone Chat View</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+<!-- Filters Section (Outside iPhone) -->
+<div class="filters">
+    <input type="text" id="searchBox" placeholder="Search messages" required autocomplete="off">
+    <select id="senderFilter"></select>
+    <input type="date" id="fromDate">
+    <input type="date" id="toDate">
+    <select id="sortOrder">
+        <option value="newest">Newest First</option>
+        <option value="oldest">Oldest First</option>
+    </select>
+    <button id="themeToggle" onclick="toggleTheme()">Dark Mode</button>
+</div>
+
+<!-- iPhone Frame for Chat -->
+<div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="iphone-frame">
+        
+        <!-- iPhone Camera & Speaker Notch -->
+        <div class="iphone-notch">
+            <div class="notch-dot infrared-camera"></div>
+            <div class="notch-dot flood-illuminator"></div>
+            <div class="notch-dot proximity-sensor"></div>
+            <div class="notch-wide speaker"></div>
+            <div class="notch-dot microphone"></div>
+            <div class="notch-dot front-camera"></div>
+            <div class="notch-dot ambient-light-sensor"></div>
+            <div class="notch-dot dot-projector"></div>
+        </div>        
+
+        <!-- Chat Header -->
+        <div class="chat-header">
+            <button class="back-btn">&larr;</button>
+            <div class="profile-info">
+                <img src="charan.jpg" alt="Profile" class="profile-pic-header">
+                <div class="text-container">
+                    <h6 class="chat-name">Charan Reddy <span class="more-options">&gt;</span></h6> <!-- Small '>' Icon -->
+                    <p class="username">@c.reddy</p>
+                </div>
+            </div>
+            <div class="call-buttons">
+                <button class="call-btn">&#128222;</button> <!-- Phone Call -->
+                <button class="video-call-btn">&#127909;</button> <!-- Video Call -->
+                <button class="flag-btn">🏳️</button> <!-- White Flag -->
+            </div>
+            <div class="chat-separator"></div> 
+        </div>
+
+        <!-- Chat Messages -->
+        <div class="chat-container">
+            <div class="chat-list" id="chatList"></div>
+        </div>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
