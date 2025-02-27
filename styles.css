@@ -175,7 +175,7 @@ body {
     background-color: #ff4d6d;
     color: white;
     border-bottom-right-radius: 5px;
-    text-align: right;
+    text-align: left;
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
